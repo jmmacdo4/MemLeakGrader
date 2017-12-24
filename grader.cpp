@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
         string temp = command;
         temp.append(" ");
         temp.append(argv[i]);
-        temp.append(" >| output.txt");
+        temp.append(" >| output.txt 2> error.txt");
 
         //cout << temp << endl;
 
