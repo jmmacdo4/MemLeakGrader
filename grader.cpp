@@ -10,7 +10,7 @@ using namespace std;
 // Usage
 //./grader executable input1.txt input2.txt input3.txt ... inputn.txt
 
-#define LEAK_DEDUCTION 3
+#define LEAK_DEDUCTION 3.0
 #define GARBAGE_LINES 9
 
 // Each input file will have it's own LeakInfo
@@ -22,14 +22,14 @@ typedef struct LeakInfo {
     int blocks;
 
     // the points taken off for this leak
-    int deductions;
+    double deductions;
 } Leak;
 
 int main(int argc, char* argv[])
 {
     // We create the valgrind command to run each time
     // and attach the executable name to the end
-    string command = "valgrind --log-file=valout.txt --tool=memcheck --leak-check=full ";
+    string command = "valgrind --log-file=valout.txt --tool=memcheck --leak-check=full ./";
     command.append(argv[1]);
 
     // Our list of Leaks so we can check for duplicates. There will be one
@@ -44,8 +44,11 @@ int main(int argc, char* argv[])
         string temp = command;
         temp.append(" ");
         temp.append(argv[i]);
+        temp.append(" >| output.txt");
 
-        //system( temp );
+        //cout << temp << endl;
+
+        system( temp.c_str() );
 
         fstream stream;
         stream.open("valout.txt");

@@ -1,23 +1,22 @@
-==15900== Memcheck, a memory error detector
-==15900== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
-==15900== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
-==15900== Command: ./un-utf8 input-01.txt
-==15900== Parent PID: 15845
-==15900== 
-==15900== 
-==15900== HEAP SUMMARY:
-==15900==     in use at exit: 1,136 bytes in 2 blocks
-==15900==   total heap usage: 88,499 allocs, 88,497 frees, 3,892,796 bytes alloc
-ated
-==15900== 
-==15900== LEAK SUMMARY:
-==15900==    definitely lost: 0 bytes in 0 blocks
-==15900==    indirectly lost: 0 bytes in 0 blocks
-==15900==      possibly lost: 0 bytes in 0 blocks
-==15900==    still reachable: 1,136 bytes in 2 blocks
-==15900==         suppressed: 0 bytes in 0 blocks
-==15900== Reachable blocks (those to which a pointer was found) are not shown.
-==15900== To see them, rerun with: --leak-check=full --show-reachable=yes
-==15900== 
-==15900== For counts of detected and suppressed errors, rerun with: -v
-==15900== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+==6317== Memcheck, a memory error detector
+==6317== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==6317== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==6317== Command: ./un-utf8 input-10.txt
+==6317== Parent PID: 6316
+==6317== 
+==6317== 
+==6317== HEAP SUMMARY:
+==6317==     in use at exit: 1,104 bytes in 2 blocks
+==6317==   total heap usage: 88,501 allocs, 88,499 frees, 3,904,484 bytes allocated
+==6317== 
+==6317== LEAK SUMMARY:
+==6317==    definitely lost: 0 bytes in 0 blocks
+==6317==    indirectly lost: 0 bytes in 0 blocks
+==6317==      possibly lost: 0 bytes in 0 blocks
+==6317==    still reachable: 1,104 bytes in 2 blocks
+==6317==         suppressed: 0 bytes in 0 blocks
+==6317== Reachable blocks (those to which a pointer was found) are not shown.
+==6317== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==6317== 
+==6317== For counts of detected and suppressed errors, rerun with: -v
+==6317== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
